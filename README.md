@@ -1,2 +1,4 @@
-# coursera-embedded-assignment
-This is the repo for weekly assignment of coursera embedded software specialization course
+/* Add Author and Project Details here */
+### Coursera Embedded Software Essentials
+### Assignment 1
+### Author: Kaushik M.K.
