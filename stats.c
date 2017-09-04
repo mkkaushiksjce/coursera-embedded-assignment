@@ -71,7 +71,17 @@ void print_array(char array[], int length){
 }
 
 int find_median(char array[], int length){
-
+  array = sort_array(array, length);
+  int middleElm;
+  int median;
+  if(length %2 == 0){
+    middleElm = length/2;
+  }else{
+    middleElm = (length + 1)/2;
+  }
+  median = median[middleElm];
+  median = charToNum(median);
+  return median;
 }
 
 float find_mean(char array[], int length){
@@ -130,4 +140,5 @@ int sort_array(char array[], int length) {
     }
   }
  print_array(array, length);
+ return array;
 }
