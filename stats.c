@@ -42,4 +42,78 @@ void main() {
 
 /* Add other Implementation File Code Here */
 
+int print_statistics(int array[]){
+  int maximum = find_maximum(array[]);
+  int minimum = find_minimum(array[]);
+  int mean = find_mean(array[]);
+  int median = find_median(array[]);
+  printf("The Maximum value of the array is=%d\n", maximum);
+  printf("The Minimum value of the array is=%d\n", minimum);
+  printf("The mean value of the array is=%d\n", mean);
+  printf("The median value of the array is=%d\n", median);
+}
 
+int charToNum(char character){
+  int convertedValue;
+    if(character - 0 < 0){
+      convertedValue = (int)(255 + (character - 0) + 1);
+    }else{
+      convertedValue = (int)(character - 0);
+    }
+    return convertedValue;
+}
+
+void print_array(char array[], int length){
+    int i=0;
+    for( i=0; i<length; i++){
+      printf("%d", charToNum(array[i]));
+     }
+}
+
+int find_median(char array[], int length){
+
+}
+
+float find_mean(char array[], int length){
+  int i=0, sum=0;
+    float mean;
+    
+    for(i=0; i<length; i++){
+      sum = sum + charToNum(array[i]);
+    }
+    mean = sum/length;
+    return mean;
+}
+
+int find_maximum(char array[], int length){
+
+  int i=0, maximum=0, next;
+    maximum = charToNum(array[i]);
+    
+    for(i=1; i< length; i++){
+      next = charToNum(array[i]);
+      if(next > maximum){
+        maximum = next;
+      }
+    }
+    printf("%d", maximum);
+  
+}
+
+int find_minimum(char array[], int length){
+
+  int i=0, minimum=0, next;
+    minimum = charToNum(array[i]);
+    
+    for(i=1; i< length; i++){
+      next = charToNum(array[i]);
+      if(next < minimum){
+        minimum = next;
+      }
+    }
+    return minimum;
+}
+
+int sort_array(int array){
+
+}
