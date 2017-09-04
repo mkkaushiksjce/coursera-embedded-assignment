@@ -66,7 +66,7 @@ int charToNum(char character){
 void print_array(char array[], int length){
     int i=0;
     for( i=0; i<length; i++){
-      printf("%d", charToNum(array[i]));
+      printf("%d\t", charToNum(array[i]));
      }
 }
 
@@ -114,6 +114,20 @@ int find_minimum(char array[], int length){
     return minimum;
 }
 
-int sort_array(int array){
-
+int sort_array(char array[], int length) {
+  int i=0, j=0;
+  char swap;
+  for (i = 0 ; i < ( length - 1 ); i++)
+  {
+    for (j = 0 ; j < length - i - 1; j++)
+    {
+      if (array[j] < array[j+1]) /* For decreasing order use < */
+      {
+        swap       = array[j];
+        array[j]   = array[j+1];
+        array[j+1] = swap;
+      }
+    }
+  }
+ print_array(array, length);
 }
